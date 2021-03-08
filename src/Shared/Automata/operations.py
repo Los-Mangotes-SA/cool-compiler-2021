@@ -1,3 +1,5 @@
+from Shared.Tools.utils import ContainerSet
+
 def move(automaton, states, symbol):
     moves = set()
     for state in states:

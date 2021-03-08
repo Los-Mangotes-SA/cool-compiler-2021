@@ -1,6 +1,5 @@
-from cmp.pycompiler import Sentence, Production
-from cmp.utils import ContainerSet, Token, UnknownToken
-from cmp.tools.parsing import build_parsing_table, metodo_predictivo_no_recursivo
+from Tools.pycompiler import Sentence, Production
+from Tools.utils import ContainerSet, Token, UnknownToken
 
 class BasicXCool:
     def __init__(self, G):
@@ -139,6 +138,7 @@ class PowXCool:
             G['Z']: ContainerSet(G['-'], G['*'], G['/'], G[')'], G.EOF, G['+'] , contains_epsilon=False)
         }
 
+"""
 class Regex:
     def __init__(self, G):
         self.G = G
@@ -226,3 +226,4 @@ class Regex:
         M = build_parsing_table(self.G, firsts, follows)
         parser = metodo_predictivo_no_recursivo(self.G, M)
         return parser
+"""
